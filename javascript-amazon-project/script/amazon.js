@@ -79,8 +79,13 @@ document.querySelectorAll('.js-add-to-cart')
                         }
                     );
                 }
-                
+                let cartQuantity = 0;
+                carts.forEach((val)=>{
+                    cartQuantity += val.quantity;
+
+                });
                 console.log(carts);
+                document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
             }
         );
